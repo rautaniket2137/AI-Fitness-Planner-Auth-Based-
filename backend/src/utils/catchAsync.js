@@ -1,0 +1,9 @@
+// Wraps async controller functions so rejected promises are forwarded to Express error handler
+const catchAsync = (fn) => (req, res, next) => {
+  Promise.resolve(fn(req, res, next)).catch(next);
+};
+
+export default catchAsync;
+
+
+

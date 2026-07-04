@@ -1,0 +1,11 @@
+{
+  "name": "ai-fitness-planner",
+  "version": "1.0.0",
+  "description": "A full-stack MERN application that generates personalized AI-powered fitness plans based on a user's fitness profile and goals. Users can register, log in, generate plans, view history, regenerate plans, and download plans as PDF.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
