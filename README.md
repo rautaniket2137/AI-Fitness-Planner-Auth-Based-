@@ -181,3 +181,5 @@ _Add your deployed URL here after deployment (e.g. Render/Railway for backend, V
 
 ## GitHub Repository
 _Add your repository URL here._
+
+# AI-Fitness-Planner-Auth-Based-
