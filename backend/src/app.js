@@ -31,7 +31,9 @@ app.use(
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization'],
+    exposedHeaders: ['Content-Type', 'Authorization', 'X-Total-Count'],
     optionsSuccessStatus: 200,
+    maxAge: 86400,
   })
 );
 

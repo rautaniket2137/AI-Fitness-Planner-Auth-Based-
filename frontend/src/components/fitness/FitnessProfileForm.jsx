@@ -31,7 +31,7 @@ const FitnessProfileForm = ({ onSubmit, loading, defaultValues = DEFAULT_PROFILE
           <label htmlFor="name" className="block text-sm font-medium text-slate-700 mb-1">
             Name
           </label>
-          <input id="name" name="name" required className="input-field" value={form.name} onChange={handleChange} />
+          <input id="name" name="name" required className="input-field" value={form.name} onChange={handleChange} autoComplete="name" />
         </div>
 
         <div>
@@ -48,6 +48,7 @@ const FitnessProfileForm = ({ onSubmit, loading, defaultValues = DEFAULT_PROFILE
             className="input-field"
             value={form.age}
             onChange={handleChange}
+            autoComplete="off"
           />
         </div>
 
@@ -78,6 +79,7 @@ const FitnessProfileForm = ({ onSubmit, loading, defaultValues = DEFAULT_PROFILE
             className="input-field"
             value={form.workoutDaysPerWeek}
             onChange={handleChange}
+            autoComplete="off"
           />
         </div>
 
@@ -95,6 +97,7 @@ const FitnessProfileForm = ({ onSubmit, loading, defaultValues = DEFAULT_PROFILE
             className="input-field"
             value={form.height}
             onChange={handleChange}
+            autoComplete="off"
           />
         </div>
 
@@ -112,6 +115,7 @@ const FitnessProfileForm = ({ onSubmit, loading, defaultValues = DEFAULT_PROFILE
             className="input-field"
             value={form.weight}
             onChange={handleChange}
+            autoComplete="off"
           />
         </div>
 
