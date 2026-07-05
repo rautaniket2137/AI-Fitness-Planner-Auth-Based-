@@ -17,13 +17,34 @@ const app = express();
 // Security headers
 app.use(helmet());
 
-// CORS
+// CORS Configuration
+const allowedOrigins = [
+  'https://ai-fitness-planner-auth-based.vercel.app', // Vercel frontend
+  'http://localhost:5173',
+  'http://localhost:3000',
+];
+
+if (NODE_ENV === 'development') {
+  allowedOrigins.push(CLIENT_URL);
+}
+
 app.use(
   cors({
-    origin: CLIENT_URL,
+    origin: (origin, callback) => {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error('CORS not allowed'));
+      }
+    },
     credentials: true,
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
   })
 );
+
+
+
 
 // Body parsers
 app.use(express.json({ limit: '10kb' }));
